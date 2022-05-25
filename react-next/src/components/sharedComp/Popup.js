@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Popup = () => {
   const [open, setOpen] = useState(false);
+
   const PopupSubmitEvent = (e) => {
     e.preventDefault();
     setOpen(false);
@@ -29,23 +30,23 @@ const Popup = () => {
       <Box className={`${open ? "active" : "not-active"}`} sx={style}>
         <form className="popup-model" onSubmit={PopupSubmitEvent}>
           <div className="popup-model-item">
-            <label for="fimage">Image</label>
+            <label htmlFor="fimage">Image</label>
             <input type="text" name="fimage" placeholder="HTTP LINK...." />
           </div>
           <div className="popup-model-item">
-            <label for="fname">Name</label>
+            <label htmlFor="fname">Name</label>
             <input type="text" name="fname" placeholder="Name...." />
           </div>
           <div className="popup-model-item">
-            <label for="fmpns">MPNS</label>
+            <label htmlFor="fmpns">MPNS</label>
             <input type="text" name="fmpns" placeholder="Mpns...." />
           </div>
           <div className="popup-model-item">
-            <label for="fproduct">Product</label>
+            <label htmlFor="fproduct">Product</label>
             <input type="text" name="fproduct" placeholder="product...." />
           </div>
           <div className="popup-model-item">
-            <label for="fmanifactuler">Manifactuler</label>
+            <label htmlFor="fmanifactuler">Manifactuler</label>
             <input
               type="text"
               name="fmanifactuler"

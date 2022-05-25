@@ -3,9 +3,15 @@ import { useState } from "react";
 // import Navigation from "./Navigation";
 import Button from "@mui/material/Button";
 import Navigation from "./Navigation";
+import { useContext } from "react";
+import { popupContext } from "../../context/context";
 
 const Header = () => {
   const [inputValue, setInputValue] = useState("");
+  const active = useContext(popupContext);
+  const activeBolean = active.popupLogic;
+  console.log(activeBolean);
+  const [open, setOpen] = useState(activeBolean);
 
   const formSubmit = (e) => {
     e.preventDefault();

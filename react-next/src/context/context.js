@@ -1,3 +1,5 @@
 import { createContext } from "react";
 
-export const popupContext = createContext({});
+const popupLogic = false;
+
+export const popupContext = createContext({ popupLogic });

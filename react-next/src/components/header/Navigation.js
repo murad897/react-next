@@ -8,8 +8,8 @@ const Navigation = () => {
       <nav>
         {navLinks.map((link, index) => {
           return (
-            <Link className="" href={link.path}>
-              <a key={index}>{link.name}</a>
+            <Link key={index} href={link.path}>
+              {link.name}
             </Link>
           );
         })}
